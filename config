@@ -155,7 +155,7 @@ bindsym Print       exec flameshot full
 bindsym Shift+Print exec flameshot gui
 
 # set background 
-exec_always feh --bg-scale ~/Pictures/test1.jpg
+exec_always feh --bg-scale ~/Pictures/90ks559nw57d1.png
 
 # set blur 
 exec_always picom --experimental-backends -fb --backend glx --vsync --config /dev/null --blur-method dual_kawase
@@ -164,7 +164,7 @@ exec_always picom --experimental-backends -fb --backend glx --vsync --config /de
 bindsym $mod+d exec xrandr --output eDP-1 --mode 2048x1152
 
 # check Keyboard Layout
-exec_always bash -c 'if lsusb | grep -q "Aluminium Keyboard"; then setxkbmap us; else setxkbmap fr;fi'
+exec_always bash -c 'if lsusb | grep -q "Keychron"; then setxkbmap us; else setxkbmap fr;fi'
 
 # check Monitor
 exec_always bash -c 'if [ $(xrandr | grep "connected" | wc -l) -ge 2 ]; then xrandr --output "$(xrandr | awk '\''/ connected/ {if (++count == 2) print $1}'\'')" --auto && xrandr --output "$(xrandr | awk '\''/ connected/ {if (++count == 1) print $1}'\'')" --off ; else xrandr --output eDP-1 --mode 2048x1152;fi'
